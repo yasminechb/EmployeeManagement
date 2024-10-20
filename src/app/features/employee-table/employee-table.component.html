@@ -1,0 +1,115 @@
+<div class="top-bar-container">
+    <div class="logo-and-titles">
+        <img class="logo responsive-img" src="../../../assets/icons/employee.png" alt="">
+        <div class="titles">
+            <p class="main-title">Gestion des Employés</p>
+        </div>
+    </div>  
+</div>
+
+<div class="main-container">
+    <div class="feature-container">
+        <div class="dividendes-card-content-container">
+            <div class="dividendes-header-container">
+              <div class="dividendes-metadata">
+                <div class="dividendes-subtitle">
+                 Liste des employés
+                </div>        
+              </div>
+              <div class="btn-create">
+                <button mat-raised-button color="primary" [routerLink]="['/add-employee']">Add Employee</button>
+              </div>
+            </div>
+          </div>
+
+<div class="employee-table-container">
+
+    <div class="filter-container">
+        <mat-form-field appearance="outline" class="search-field">
+          <img matPrefix src="../../../assets/icons/search.png" class="search-icon" alt="search-icon" />
+          <input matInput (keyup)="applyFilter($event)" placeholder="Search employees">
+        </mat-form-field>
+      </div>
+
+
+  <div class="table-container">
+    <table mat-table [dataSource]="dataSource" matSort class="mat-elevation-z8" class="dividendes-table">
+      <!-- ID Column -->
+      <ng-container matColumnDef="id">
+        <th mat-header-cell *matHeaderCellDef mat-sort-header class="dividendes-table-header"> ID </th>
+        <td mat-cell *matCellDef="let employee"  class="dividendes-table-content">{{ employee.id ? employee.id : 'ND' }}
+        </td>
+      </ng-container>
+  
+      <!-- First Name Column -->
+      <ng-container matColumnDef="firstName">
+        <th mat-header-cell *matHeaderCellDef mat-sort-header class="dividendes-table-header"> First Name </th>
+        <td mat-cell *matCellDef="let employee"  class="dividendes-table-content"> {{ employee.firstName  ? employee.firstName : 'ND'}} </td>
+      </ng-container>
+  
+      <!-- Last Name Column -->
+      <ng-container matColumnDef="lastName">
+        <th mat-header-cell *matHeaderCellDef mat-sort-header class="dividendes-table-header"> Last Name </th>
+        <td mat-cell *matCellDef="let employee"  class="dividendes-table-content"> {{ employee.lastName ? employee.lastName : 'ND'}} </td>
+      </ng-container>
+  
+      <!-- Age Column -->
+      <ng-container matColumnDef="age">
+        <th mat-header-cell *matHeaderCellDef mat-sort-header class="dividendes-table-header"> Age </th>
+        <td mat-cell *matCellDef="let employee"  class="dividendes-table-content"> {{ employee.age ? employee.age : 'ND' }} </td>
+      </ng-container>
+  
+      <!-- Date of Birth Column -->
+      <ng-container matColumnDef="dob">
+        <th mat-header-cell *matHeaderCellDef mat-sort-header class="dividendes-table-header"> DOB </th>
+        <td mat-cell *matCellDef="let employee"  class="dividendes-table-content"> {{ employee.dob ? employee.dob : 'ND'}} </td>
+      </ng-container>
+  
+      <!-- Email Column -->
+      <ng-container matColumnDef="email">
+        <th mat-header-cell *matHeaderCellDef mat-sort-header class="dividendes-table-header"> Email </th>
+        <td mat-cell *matCellDef="let employee"  class="dividendes-table-content"> {{ employee.email ? employee.email : 'ND'}} </td>
+      </ng-container>
+  
+      <!-- Salary Column -->
+      <ng-container matColumnDef="salary">
+        <th mat-header-cell *matHeaderCellDef mat-sort-header class="dividendes-table-header"> Salary </th>
+        <td mat-cell *matCellDef="let employee"  class="dividendes-table-content"> {{ employee.salary  ? employee.salary : 'ND'}} </td>
+      </ng-container>
+  
+      <!-- Address Column -->
+      <ng-container matColumnDef="address">
+        <th mat-header-cell *matHeaderCellDef mat-sort-header class="dividendes-table-header"> Address </th>
+        <td mat-cell *matCellDef="let employee"  class="dividendes-table-content"> {{ employee.address ? employee.address : 'ND'}} </td>
+      </ng-container>
+  
+      <!-- Image URL Column -->
+      <ng-container matColumnDef="imageUrl">
+        <th mat-header-cell *matHeaderCellDef mat-sort-header class="dividendes-table-header"> Hobby </th>
+        <td mat-cell *matCellDef="let employee"  class="dividendes-table-content"> {{ employee.imageUrl ? employee.imageUrl : 'ND' }} </td>
+      </ng-container>
+  
+      <!-- Contact Number Column -->
+      <ng-container matColumnDef="contactNumber">
+        <th mat-header-cell *matHeaderCellDef mat-sort-header class="dividendes-table-header"> Contact Number </th>
+        <td mat-cell *matCellDef="let employee"  class="dividendes-table-content"> {{ employee.contactNumber? employee.contactNumber : 'ND' }} </td>
+      </ng-container>
+  
+      <!-- Actions Column -->
+      <ng-container matColumnDef="actions">
+        <th mat-header-cell *matHeaderCellDef class="dividendes-table-header"> Actions </th>
+        <td mat-cell *matCellDef="let employee">
+        <div class="delete-icon"  (click)="deleteEmployee(employee.id)" ></div>
+       
+        </td>
+      </ng-container>
+  
+      <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
+      <tr mat-row *matRowDef="let row; columns: displayedColumns;"></tr>
+    </table>
+</div>
+</div>
+</div>
+  
+    <mat-paginator [pageSizeOptions]="[10]" showFirstLastButtons></mat-paginator>
+ 

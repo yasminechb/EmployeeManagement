@@ -1,0 +1,97 @@
+<div class="top-bar-container">
+    <div class="logo-and-titles">
+        <img class="logo responsive-img" src="../../../assets/icons/employee.png" alt="">
+        <div class="titles">
+            <p class="main-title">Gestion des Employés</p>
+        </div>
+    </div>  
+</div>
+<div class="dividendes-subtitle">
+    Ajouter un employé
+   </div>     
+<div class="add-employee-form">
+    <form [formGroup]="employeeForm" (ngSubmit)="onSubmit()">
+        <div>
+            <label for="firstName">First Name</label>
+            <mat-form-field appearance="outline">
+              <input matInput id="firstName" formControlName="firstName" placeholder="Enter first name" required>
+              <mat-error *ngIf="employeeForm.get('firstName')?.invalid && employeeForm.get('firstName')?.touched">
+                First Name is required
+              </mat-error>
+            </mat-form-field>
+          </div>
+          
+          <div>
+            <label for="lastName">Last Name</label>
+            <mat-form-field appearance="outline">
+              <input matInput id="lastName" formControlName="lastName" placeholder="Enter last name" required>
+              <mat-error *ngIf="employeeForm.get('lastName')?.invalid && employeeForm.get('lastName')?.touched">
+                Last Name is required
+              </mat-error>
+            </mat-form-field>
+          </div>
+          
+          <div>
+            <label for="address">Address</label>
+            <mat-form-field appearance="outline">
+              <input matInput id="address" formControlName="address" placeholder="Enter address">
+            </mat-form-field>
+          </div>
+          
+          <div>
+            <label for="age">Age</label>
+            <mat-form-field appearance="outline">
+              <input matInput id="age" type="number" formControlName="age" placeholder="Enter age" required>
+              <mat-error *ngIf="employeeForm.get('age')?.invalid && employeeForm.get('age')?.touched">
+                Age must be at least 18
+              </mat-error>
+            </mat-form-field>
+          </div>
+          
+          <div>
+            <label for="dateOfBirth">Date de naissance</label>
+            <mat-form-field appearance="outline">
+              <input matInput id="dateOfBirth" [matDatepicker]="picker" formControlName="dateOfBirth" placeholder="Enter date of birth" required>
+              <mat-datepicker-toggle matSuffix [for]="picker"></mat-datepicker-toggle>
+              <mat-datepicker #picker></mat-datepicker>
+              <mat-error *ngIf="employeeForm.get('dateOfBirth')?.invalid && employeeForm.get('dateOfBirth')?.touched">
+                Veuillez entrer une date valide.
+              </mat-error>
+            </mat-form-field>
+          </div>
+          
+          <div>
+            <label for="email">Email</label>
+            <mat-form-field appearance="outline">
+              <input matInput id="email" formControlName="email" placeholder="Enter email" required>
+              <mat-error *ngIf="employeeForm.get('email')?.invalid && employeeForm.get('email')?.touched">
+                Enter a valid email
+              </mat-error>
+            </mat-form-field>
+          </div>
+          
+          <div>
+            <label for="salary">Salary</label>
+            <mat-form-field appearance="outline">
+              <input matInput id="salary" formControlName="salary" placeholder="Enter salary" required>
+              <mat-error *ngIf="employeeForm.get('salary')?.invalid && employeeForm.get('salary')?.touched">
+                Salary is required
+              </mat-error>
+            </mat-form-field>
+          </div>
+          
+          <div>
+            <label for="contactNumber">Contact Number</label>
+            <mat-form-field appearance="outline">
+              <input matInput id="contactNumber" formControlName="contactNumber" placeholder="Enter contact number" required>
+              <mat-error *ngIf="employeeForm.get('contactNumber')?.invalid && employeeForm.get('contactNumber')?.touched">
+                Contact number is required
+              </mat-error>
+            </mat-form-field>
+          </div>
+  
+      <button mat-raised-button color="primary" type="submit" [disabled]="employeeForm.invalid">
+        Add Employee
+      </button>
+    </form>
+  
