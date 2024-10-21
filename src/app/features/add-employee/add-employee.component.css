@@ -30,7 +30,7 @@
 }
 .add-employee-form {
     max-width: 600px;
-    margin: 100px auto; /* Le 'auto' permet de centrer horizontalement */
+    margin: 100px auto; 
     padding: 20px;
     background-color: #f9f9f9;
     border-radius: 8px;
@@ -64,7 +64,7 @@ button[type="submit"]:disabled {
 }
 
 button[type="submit"]:hover {
-    background-color: #45a049;
+    background-color:#68b1e8;
 }
 
 mat-datepicker-toggle {
@@ -83,7 +83,7 @@ mat-datepicker-toggle {
     font-size: 12px;
     color: red;
 }
-.dividendes-subtitle {
+.employee-subtitle {
     text-align: center;
     font-size: 1.5em; 
     font-weight: bold; 

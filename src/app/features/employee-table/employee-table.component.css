@@ -1,7 +1,7 @@
 .employee-table-container {
     padding: 16px;
   }
-  .dividendes-subtitle {
+  .employee-subtitle {
     color: #182230;
     font-family: "Roboto-ExtraBold", sans-serif;
     font-size: 16px;
@@ -10,7 +10,7 @@
     line-height: 24px;
   }
   
-  .number-of-dividendes {
+  .number-of-employee {
     color: #727272;
     font-family: "Roboto-Regular", sans-serif;
     font-size: 13px;
@@ -23,7 +23,7 @@
     margin-right: 4px;
   }
   
-  .dividendes-header-container {
+  .employee-header-container {
     display: flex;
     align-items: center;
     justify-content: space-between;
@@ -32,7 +32,7 @@
   
   }
   
-  .dividendes-table {
+  .employee-table {
     width: 100%;
     border: none;
     color: #6F6F6F;
@@ -46,13 +46,13 @@
   
   .filter-container {
     display: flex;
-    justify-content: center; /* Center the search field */
-    align-items: center; /* Align the search field vertically */
+    justify-content: center;
+    align-items: center; 
     margin-bottom: 16px;
   }
   
   .search-field {
-    width: 300px; /* Adjust the width as needed */
+    width: 300px; 
   }
   
   .search-icon {
@@ -118,45 +118,7 @@
   }
 
 
-.dividendes-header-container {
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  padding-left: 32px;
-  padding-right: 14px;
-
-}
-
-.dividendes-table {
-  width: 100%;
-  border: none;
-  color: #6F6F6F;
-  font-family: "Roboto-Medium", sans-serif;
-  font-size: 14px;
-  font-style: normal;
-  font-weight: 500;
-  line-height: 12px;
-
-}
-
-.dividendes-table-header {
-  vertical-align: bottom;
-  padding-right: 0;
-  border: none;
-  margin: 0 5px;
-
-  .dividendes-table-header-content {
-
-    color: #4C4C4C;
-    font-family: "Roboto-Medium", sans-serif;
-    font-size: 13px;
-    font-style: normal;
-    font-weight: 500;
-    line-height: 21px;
-  }
-}
-
-.dividendes-table-content {
+.employee-table-content {
 
   height: 86px;
   vertical-align: middle;
@@ -167,17 +129,13 @@
 
 }
 
-.dividendes-table tr.mat-row:hover {
+.employee-table tr.mat-row:hover {
   background-color: #F1F6FA;
 }
-
 
 .table-container {
   margin-top: 16px;
 }
-
-
-
 
 .text-container {
   position: relative;
@@ -203,56 +161,18 @@
       background-position: center;
     }
   }
-
-
-
-
-
   th.mat-header-cell, td.mat-cell, td.mat-footer-cell {
     padding: 0;
     border-bottom-width: 1px;
    border-bottom-style: none;
   }
- 
-
-
-
-
-  
-
-
-.dividendes-subtitle {
-  color: #182230;
-  font-family: "Roboto-ExtraBold", sans-serif;
-  font-size: 16px;
-  font-style: normal;
-  font-weight: 800;
-  line-height: 24px;
-}
-
-.number-of-dividendes {
-  color: #727272;
-  font-family: "Roboto-Regular", sans-serif;
-  font-size: 13px;
-  font-style: normal;
-  font-weight: 400;
-  line-height: 22px;
-}
 
 .btn-create {
   margin-right: 4px;
 }
 
-.dividendes-header-container {
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  padding-left: 32px;
-  padding-right: 14px;
 
-}
-
-.dividendes-table {
+.employee-table {
   width: 100%;
   border: none;
   color: #6F6F6F;
@@ -264,46 +184,8 @@
 
 }
 
-.dividendes-table-header {
-  vertical-align: bottom;
-  padding-right: 0;
-  border: none;
-  margin: 0 5px;
-
-  .dividendes-table-header-content {
-
-    color: #4C4C4C;
-    font-family: "Roboto-Medium", sans-serif;
-    font-size: 13px;
-    font-style: normal;
-    font-weight: 500;
-    line-height: 21px;
-  }
-}
-
-.dividendes-table-content {
-
-  height: 86px;
-  vertical-align: middle;
-  border: none;
-  max-width: 200px;
-  margin: 0 5px;
-  padding-right: 18px;
-
-}
-
-.dividendes-table tr.mat-row:hover {
-  background-color: #F1F6FA;
-}
-
-.icon-gap img {
-  margin-right: 16px;
-  pointer-events: none;
-}
 
 .main-container {
-  /* padding-top: 38px;
-  padding-right: 38px; */
   height: 100%;
   overflow:auto;
 }
@@ -328,14 +210,6 @@
 }
 
 
-/* th.mat-header-cell:first-of-type, td.mat-cell:first-of-type, td.mat-footer-cell:first-of-type {
-  padding-left: 0;
-}
-
-::ng-deep .cdk-overlay-container {
-  display: none;
-} */
-
 
 .top-bar-container {
     display: flex;
@@ -358,10 +232,6 @@
     flex-shrink: 0;
     margin-right: 10px;
 }
-
-
-
-
 
 .router-outlet-container{
     height: calc(100vh - 94px);

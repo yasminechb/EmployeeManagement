@@ -2,12 +2,12 @@
     <div class="logo-and-titles">
         <img class="logo responsive-img" src="../../../assets/icons/employee.png" alt="">
         <div class="titles">
-            <p class="main-title">Gestion des Employés</p>
+            <p class="main-title">Employee Management</p>
         </div>
     </div>  
 </div>
-<div class="dividendes-subtitle">
-    Ajouter un employé
+<div class="employee-subtitle">
+    Add Employee
    </div>     
 <div class="add-employee-form">
     <form [formGroup]="employeeForm" (ngSubmit)="onSubmit()">
@@ -49,7 +49,7 @@
           </div>
           
           <div>
-            <label for="dateOfBirth">Date de naissance</label>
+            <label for="dateOfBirth">Date of birth</label>
             <mat-form-field appearance="outline">
               <input matInput id="dateOfBirth" [matDatepicker]="picker" formControlName="dateOfBirth" placeholder="Enter date of birth" required>
               <mat-datepicker-toggle matSuffix [for]="picker"></mat-datepicker-toggle>
